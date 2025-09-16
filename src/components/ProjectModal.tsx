@@ -1,7 +1,8 @@
 import { X, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent } from "@/components/ui/dialog"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { motion, AnimatePresence } from "framer-motion"
 
 interface Project {
   id: number
@@ -21,15 +22,39 @@ interface ProjectModalProps {
 
 export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [direction, setDirection] = useState(0)
+
+  useEffect(() => {
+    setCurrentImageIndex(0)
+    setDirection(0)
+  }, [project?.id])
 
   if (!project) return null
 
   const nextImage = () => {
+    setDirection(1) // Moving right
     setCurrentImageIndex((prev) => (prev + 1) % project.images.length)
   }
 
   const prevImage = () => {
+    setDirection(-1) // Moving left
     setCurrentImageIndex((prev) => (prev - 1 + project.images.length) % project.images.length)
+  }
+
+  // Animation variants for horizontal slide
+  const imageVariants = {
+    initial: (direction: number) => ({
+      x: direction > 0 ? '100%' : '-100%', // Start from right if next, left if prev
+      opacity: 0,
+    }),
+    animate: {
+      x: 0,
+      opacity: 1,
+    },
+    exit: (direction: number) => ({
+      x: direction > 0 ? '-100%' : '100%', // Exit to left if next, right if prev
+      opacity: 0,
+    }),
   }
 
   return (
@@ -37,19 +62,28 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
         <div className="space-y-6">
           {/* Image Slider */}
-          <div className="relative">
-            <img
-              src={project.images[currentImageIndex]}
-              alt={`${project.title} - Image ${currentImageIndex + 1}`}
-              className="w-full h-96 md:h-[28rem] object-top rounded-lg"
-            />
+          <div className="relative h-96 md:h-[28rem] overflow-hidden rounded-lg">
+            <AnimatePresence initial={false} custom={direction}>
+              <motion.img
+                key={currentImageIndex}
+                src={project.images[currentImageIndex]}
+                alt={`${project.title} - Image ${currentImageIndex + 1}`}
+                className="absolute top-0 left-0 w-full h-full object-top"
+                variants={imageVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                custom={direction}
+              />
+            </AnimatePresence>
             
             {project.images.length > 1 && (
               <>
                 <Button
                   variant="outline"
                   size="icon"
-                  className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-background/80 backdrop-blur-sm"
+                  className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-background/80 backdrop-blur-sm hover:bg-background/90 transition-all duration-200"
                   onClick={prevImage}
                 >
                   <ChevronLeft className="h-4 w-4" />
@@ -57,7 +91,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                 <Button
                   variant="outline"
                   size="icon"
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-background/80 backdrop-blur-sm"
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-background/80 backdrop-blur-sm hover:bg-background/90 transition-all duration-200"
                   onClick={nextImage}
                 >
                   <ChevronRight className="h-4 w-4" />
@@ -67,10 +101,13 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                   {project.images.map((_, index) => (
                     <button
                       key={index}
-                      className={`w-2 h-2 rounded-full ${
-                        index === currentImageIndex ? 'bg-white' : 'bg-white/50'
+                      className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                        index === currentImageIndex ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'
                       }`}
-                      onClick={() => setCurrentImageIndex(index)}
+                      onClick={() => {
+                        setDirection(index > currentImageIndex ? 1 : -1)
+                        setCurrentImageIndex(index)
+                      }}
                     />
                   ))}
                 </div>

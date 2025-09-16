@@ -9,7 +9,6 @@ export function useScrollAnimation(threshold = 0.1) {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          // Don't unobserve to allow re-triggering if element goes out and back in view
         }
       },
       {
