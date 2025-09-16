@@ -41,7 +41,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
             <img
               src={project.images[currentImageIndex]}
               alt={`${project.title} - Image ${currentImageIndex + 1}`}
-              className="w-full h-64 md:h-80 object-cover rounded-lg"
+              className="w-full h-96 md:h-[28rem] object-top rounded-lg"
             />
             
             {project.images.length > 1 && (

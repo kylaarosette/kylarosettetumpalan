@@ -1,8 +1,12 @@
 import { Download, Code, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import profilePhoto from "@/assets/profile-photo.png"
+import photo1 from "@/assets/photo1.png"
+import photo2 from "@/assets/photo2.png"
+import { useState } from "react"
 
 export function Hero() {
+  const [isHovered, setIsHovered] = useState(false)
+
   const handleDownloadCV = () => {
     // Trigger a download
     const link = document.createElement('a')
@@ -35,7 +39,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       
       {/* Floating elements */}
-      <div className="absolute top-1/4 left-1/4 opacity-20">
+      <div className="absolute top-1/4 left-1/3 opacity-20">
         <Code className="w-8 h-8 text-primary animate-bounce delay-500" />
       </div>
       <div className="absolute top-1/3 right-1/4 opacity-20">
@@ -90,9 +94,13 @@ export function Hero() {
               <div className="absolute -inset-4 rounded-full border border-accent-blue/30 animate-pulse"></div>
               
               {/* Main image */}
-              <div className="relative z-10 fade-in">
+              <div 
+                className="relative z-10 fade-in"
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+              >
                 <img
-                  src={profilePhoto}
+                  src={isHovered ? photo2 : photo1}
                   alt="Kyla Rosette Tumpalan"
                   className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-background shadow-2xl animate-float"
                 />
