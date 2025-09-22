@@ -1,5 +1,7 @@
 import { Hero } from "@/components/Hero";
+import { About } from "@/components/About";
 import { TechStack } from "@/components/TechStack";
+import { Experience } from "@/components/Experience";
 import { Projects } from "@/components/Projects";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
@@ -13,8 +15,14 @@ const Index = () => {
       <div id="hero">
         <Hero />
       </div>
+      <div id="about">
+        <About />
+      </div>
       <div id="tech-stack">
         <TechStack />
+      </div>
+      <div id="experience">
+        <Experience />
       </div>
       <div id="projects">
         <Projects />

@@ -41,6 +41,29 @@ import gch8 from "@/assets/gch8.png"
 import gch9 from "@/assets/gch9.png"
 import gch10 from "@/assets/gch10.png"
 
+import tmt0 from "@/assets/tmt0.png"
+import tmt1 from "@/assets/tmt1.png"
+import tmt2 from "@/assets/tmt2.png"
+import tmt3 from "@/assets/tmt3.png"
+import tmt4 from "@/assets/tmt4.png"
+import tmt5 from "@/assets/tmt5.png"
+import tmt6 from "@/assets/tmt6.png"
+import tmt7 from "@/assets/tmt7.png"
+import tmt8 from "@/assets/tmt8.png"
+import tmt9 from "@/assets/tmt9.png"
+import tmt10 from "@/assets/tmt10.png"
+
+import jr0 from "@/assets/jr0.png"
+import jr1 from "@/assets/jr1.jpg"
+import jr2 from "@/assets/jr2.jpg"
+import jr3 from "@/assets/jr3.jpg"
+import jr4 from "@/assets/jr4.jpg"
+import jr5 from "@/assets/jr5.jpg"
+import jr6 from "@/assets/jr6.jpg"
+import jr7 from "@/assets/jr7.jpg"
+import jr8 from "@/assets/jr8.jpg"
+import jr9 from "@/assets/jr9.jpg"
+
 interface Project {
   id: number
   title: string
@@ -88,6 +111,24 @@ const projects: Project[] = [
     liveUrl: "https://grand-cascade-hotel.infinityfreeapp.com/",
     thumbnail: gch0
   },
+  {
+    id: 5,
+    title: "Triopica Milk Tea",
+    description: "",
+    technologies: ["Angular"],
+    images: [tmt1, tmt2, tmt3, tmt4, tmt5, tmt6, tmt7, tmt8, tmt9, tmt10],
+    liveUrl: "https://drive.google.com/file/d/1p1izcVQFw6ssxFrrHU6L20-2isihGvYL/view?usp=sharing",
+    thumbnail: tmt0
+  },
+  {
+    id: 6,
+    title: "JAVAriety",
+    description: "",
+    technologies: ["Java"],
+    images: [jr1, jr2, jr3, jr4, jr5, jr6, jr7, jr8, jr9],
+    liveUrl: "https://drive.google.com/file/d/1HO4Kmp20XladnELriHqixeFuuxm3kcmo/view?usp=sharing",
+    thumbnail: jr0
+  },
 ]
 
 export function Projects() {
@@ -106,7 +147,7 @@ export function Projects() {
   }
 
   return (
-    <section ref={ref} className="section-padding">
+    <section ref={ref} className="section-padding bg-muted/30">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className={`text-4xl md:text-5xl font-bold mb-4 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>

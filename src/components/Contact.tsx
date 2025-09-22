@@ -6,7 +6,7 @@ export function Contact() {
   const { ref, isVisible } = useScrollAnimation()
 
   return (
-    <section ref={ref} className="section-padding bg-muted/30">
+    <section ref={ref} className="section-padding">
       <div className="container mx-auto max-w-2xl text-center">
         <h2 className={`text-4xl font-bold mb-8 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           Get In Touch

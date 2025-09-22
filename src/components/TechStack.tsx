@@ -13,7 +13,9 @@ import {
   SiWordpress, 
   SiWix, 
   SiGithub, 
-  SiGit
+  SiGit,
+  SiCanva,
+  SiFigma
 } from 'react-icons/si'
 import { Code } from 'lucide-react'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
@@ -38,6 +40,8 @@ const toolsTechs = [
   { name: "Shopify", icon: SiShopify },
   { name: "WordPress", icon: SiWordpress },
   { name: "Wix", icon: SiWix },
+  { name: "Canva", icon: SiCanva },
+  { name: "Figma", icon: SiFigma },
   { name: "GitHub", icon: SiGithub },
   { name: "Git", icon: SiGit },
   { name: "VS Code", icon: Code },
@@ -47,56 +51,85 @@ export function TechStack() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section ref={ref} className="section-padding bg-muted/30">
+    <section ref={ref} className="section-padding bg-muted/30 py-24">
       <div className="container mx-auto">
-        <h2 className={`text-4xl font-bold text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          Tech Stack
-        </h2>
+        <div className="text-center mb-20">
+          <h2 className={`text-5xl font-bold mb-6 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            Technical Toolkit
+          </h2>
+          <p className={`text-xl text-muted-foreground max-w-2xl mx-auto transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            Technologies and tools I use to bring ideas to life
+          </p>
+        </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          <div className={`transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <h3 className="text-2xl font-semibold mb-6 text-center">Frontend</h3>
-            <div className="flex flex-wrap justify-center gap-6">
-              {frontendTechs.map((tech, index) => (
-                <div 
-                  key={index} 
-                  className={`tech-icon text-5xl transition-all duration-500 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}
-                  style={{ transitionDelay: `${(index + 3) * 100}ms` }}
-                  title={tech.name}
-                >
-                  <tech.icon />
-                </div>
-              ))}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+          <div className={`transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-6 border border-border/50 hover:border-primary/20 transition-colors">
+              <h3 className="text-2xl font-semibold mb-6 text-center flex items-center justify-center gap-2">
+                Frontend Development
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+                {frontendTechs.map((tech, index) => (
+                  <div 
+                    key={index} 
+                    className={`flex flex-col items-center group cursor-pointer transition-all duration-500 hover:scale-105 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}
+                    style={{ transitionDelay: `${(index + 4) * 100}ms` }}
+                  >
+                    <div className="tech-icon text-4xl mb-2 group-hover:text-primary transition-colors" title={tech.name}>
+                      <tech.icon />
+                    </div>
+                    <span className="text-xs font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors">
+                      {tech.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
-          <div className={`transition-all duration-700 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <h3 className="text-2xl font-semibold mb-6 text-center">Backend</h3>
-            <div className="flex flex-wrap justify-center gap-6">
-              {backendTechs.map((tech, index) => (
-                <div 
-                  key={index} 
-                  className={`tech-icon text-5xl transition-all duration-500 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}
-                  style={{ transitionDelay: `${(index + 8) * 100}ms` }}
-                  title={tech.name}
-                >
-                  <tech.icon />
-                </div>
-              ))}
+          <div className={`transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-6 border border-border/50 hover:border-primary/20 transition-colors">
+              <h3 className="text-2xl font-semibold mb-6 text-center flex items-center justify-center gap-2">
+                Backend Development
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+                {backendTechs.map((tech, index) => (
+                  <div 
+                    key={index} 
+                    className={`flex flex-col items-center group cursor-pointer transition-all duration-500 hover:scale-105 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}
+                    style={{ transitionDelay: `${(index + 9) * 100}ms` }}
+                  >
+                    <div className="tech-icon text-4xl mb-2 group-hover:text-primary transition-colors" title={tech.name}>
+                      <tech.icon />
+                    </div>
+                    <span className="text-xs font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors">
+                      {tech.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
+        </div>
 
-          <div className={`transition-all duration-700 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <h3 className="text-2xl font-semibold mb-6 text-center">Tools</h3>
-            <div className="flex flex-wrap justify-center gap-6">
+        <div className={`transition-all duration-700 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-6 border border-border/50 hover:border-primary/20 transition-colors">
+            <h3 className="text-2xl font-semibold mb-6 text-center flex items-center justify-center gap-2">
+              Tools & Platforms
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {toolsTechs.map((tech, index) => (
                 <div 
                   key={index} 
-                  className={`tech-icon text-5xl transition-all duration-500 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}
-                  style={{ transitionDelay: `${(index + 13) * 100}ms` }}
-                  title={tech.name}
+                  className={`flex flex-col items-center group cursor-pointer transition-all duration-500 hover:scale-105 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}
+                  style={{ transitionDelay: `${(index + 14) * 100}ms` }}
                 >
-                  <tech.icon />
+                  <div className="tech-icon text-4xl mb-2 group-hover:text-primary transition-colors" title={tech.name}>
+                    <tech.icon />
+                  </div>
+                  <span className="text-xs font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors">
+                    {tech.name}
+                  </span>
                 </div>
               ))}
             </div>
