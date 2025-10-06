@@ -149,7 +149,7 @@ export function Hero() {
                 Front-end Developer
               </h2>
               
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-lg">
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0">
                 Passionate IT graduate with expertise in modern web technologies. 
                 I create innovative solutions that bridge the gap between design and functionality.
               </p>

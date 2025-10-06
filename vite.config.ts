@@ -10,7 +10,6 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
-  //base: process.env.VITE_BASE_PATH || "/kylarosettetumpalan",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

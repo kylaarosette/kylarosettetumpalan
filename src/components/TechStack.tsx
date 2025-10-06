@@ -38,7 +38,7 @@ const backendTechs = [
 
 const toolsTechs = [
   { name: "Shopify", icon: SiShopify },
-  { name: "WordPress", icon: SiWordpress },
+  //{ name: "WordPress", icon: SiWordpress },
   { name: "Wix", icon: SiWix },
   { name: "Canva", icon: SiCanva },
   { name: "Figma", icon: SiFigma },

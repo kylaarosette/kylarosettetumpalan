@@ -56,9 +56,23 @@ export function Navbar() {
             <Button
               variant="ghost"
               className="hover:text-primary transition-colors"
+              onClick={() => scrollToSection('about')}
+            >
+              About
+            </Button>
+            <Button
+              variant="ghost"
+              className="hover:text-primary transition-colors"
               onClick={() => scrollToSection('tech-stack')}
             >
               Skills
+            </Button>
+            <Button
+              variant="ghost"
+              className="hover:text-primary transition-colors"
+              onClick={() => scrollToSection('experience')}
+            >
+              Experience
             </Button>
             <Button
               variant="ghost"
@@ -98,9 +112,23 @@ export function Navbar() {
               <Button
                 variant="ghost"
                 className="w-full text-left justify-start hover:text-primary"
+                onClick={() => scrollToSection('about')}
+              >
+                About
+              </Button>
+              <Button
+                variant="ghost"
+                className="w-full text-left justify-start hover:text-primary"
                 onClick={() => scrollToSection('tech-stack')}
               >
                 Skills
+              </Button>
+              <Button
+                variant="ghost"
+                className="w-full text-left justify-start hover:text-primary"
+                onClick={() => scrollToSection('experience')}
+              >
+                Experience
               </Button>
               <Button
                 variant="ghost"

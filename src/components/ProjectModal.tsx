@@ -59,42 +59,44 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="max-w-[95vw] md:max-w-2xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-5xl max-h-[90vh] overflow-y-auto overflow-x-hidden p-4 md:p-6">
         <div className="space-y-6">
           {/* Image Slider */}
-          <div className="relative h-96 md:h-[28rem] overflow-hidden rounded-lg">
-            <AnimatePresence initial={false} custom={direction}>
-              <motion.img
-                key={currentImageIndex}
-                src={project.images[currentImageIndex]}
-                alt={`${project.title} - Image ${currentImageIndex + 1}`}
-                className="absolute top-0 left-0 w-full h-full object-top"
-                variants={imageVariants}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-                custom={direction}
-              />
-            </AnimatePresence>
+          <div className="relative w-full bg-muted/20 rounded-lg overflow-hidden">
+            <div className="relative aspect-video">
+              <AnimatePresence initial={false} custom={direction}>
+                <motion.img
+                  key={currentImageIndex}
+                  src={project.images[currentImageIndex]}
+                  alt={`${project.title} - Image ${currentImageIndex + 1}`}
+                  className="absolute top-0 left-0 w-full h-full object-contain bg-background/5"
+                  variants={imageVariants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  custom={direction}
+                />
+              </AnimatePresence>
+            </div>
             
             {project.images.length > 1 && (
               <>
                 <Button
                   variant="outline"
                   size="icon"
-                  className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-background/80 backdrop-blur-sm hover:bg-background/90 transition-all duration-200"
+                  className="absolute left-1 md:left-2 top-1/2 transform -translate-y-1/2 bg-background/80 backdrop-blur-sm hover:bg-background/90 transition-all duration-200 h-8 w-8 md:h-10 md:w-10"
                   onClick={prevImage}
                 >
-                  <ChevronLeft className="h-4 w-4" />
+                  <ChevronLeft className="h-3 w-3 md:h-4 md:w-4" />
                 </Button>
                 <Button
                   variant="outline"
                   size="icon"
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-background/80 backdrop-blur-sm hover:bg-background/90 transition-all duration-200"
+                  className="absolute right-1 md:right-2 top-1/2 transform -translate-y-1/2 bg-background/80 backdrop-blur-sm hover:bg-background/90 transition-all duration-200 h-8 w-8 md:h-10 md:w-10"
                   onClick={nextImage}
                 >
-                  <ChevronRight className="h-4 w-4" />
+                  <ChevronRight className="h-3 w-3 md:h-4 md:w-4" />
                 </Button>
                 
                 <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">

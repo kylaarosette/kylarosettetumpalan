@@ -1,5 +1,6 @@
 import { GraduationCap, Award, Code, Heart } from "lucide-react"
 import { useScrollAnimation } from "@/hooks/useScrollAnimation"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 
 export function About() {
   const { ref, isVisible } = useScrollAnimation();
@@ -46,16 +47,17 @@ export function About() {
                 As a recent IT graduate, I bring fresh perspectives and cutting-edge knowledge to web development. My journey in technology has been driven by curiosity and a passion for solving complex problems through innovative solutions.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                I specialize in creating responsive, user-friendly web applications using modern technologies. My academic background has provided me with a solid foundation in technical principles, while my personal projects have honed my practical development skills.
+                I specialize in creating responsive, user-friendly web applications using modern technologies. My academic background has provided me with a solid foundation in technical principles, while my projects have honed my practical development skills.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I'm always eager to take on new challenges and collaborate with teams that share my enthusiasm for creating meaningful digital experiences. Let's build something amazing together!
+                I'm always excited to take on new challenges, collaborate with teams that share my passion for creating meaningful digital experiences, and continuously learn and upskill to grow both personally and professionally.
               </p>
             </div>
           </div>
 
           <div className={`transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {/* Desktop Grid */}
+            <div className="hidden sm:grid grid-cols-2 gap-6">
               {achievements.map((achievement, index) => (
                 <div 
                   key={index}
@@ -73,6 +75,31 @@ export function About() {
                   </p>
                 </div>
               ))}
+            </div>
+
+            {/* Mobile Carousel */}
+            <div className="sm:hidden">
+              <Carousel opts={{ loop: true }} className="w-full max-w-xs mx-auto">
+                <CarouselContent>
+                  {achievements.map((achievement, index) => (
+                    <CarouselItem key={index}>
+                      <div className={`bg-card/50 backdrop-blur-sm rounded-2xl p-6 border border-border/50 transition-all duration-500 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+                        <div className="flex items-center gap-4 mb-4">
+                          <div className="p-3 bg-primary/10 rounded-full">
+                            <achievement.icon className="w-6 h-6 text-primary" />
+                          </div>
+                          <h3 className="text-lg font-semibold">{achievement.title}</h3>
+                        </div>
+                        <p className="text-muted-foreground text-sm leading-relaxed">
+                          {achievement.description}
+                        </p>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
             </div>
           </div>
         </div>

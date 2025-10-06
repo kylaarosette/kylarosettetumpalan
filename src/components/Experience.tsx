@@ -27,7 +27,7 @@ export function Experience() {
       company: "Technological Institute of the Philippines",
       location: "Quezon City",
       period: "January - April 2025",
-      description: "Worked on both frontend and backend development for various projects. Gained hands-on experience with MERN Stack as the lead developer.",
+      description: "Worked on both frontend and backend development for a special project of the university. Gained hands-on experience with MERN Stack as the lead developer.",
       isActive: false
     }
   ];
