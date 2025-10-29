@@ -146,7 +146,7 @@ export function Hero() {
               </h1>
               
               <h2 className="text-xl md:text-2xl text-muted-foreground mb-6 font-light">
-                Front-end Developer
+                Freelance Web Developer & Funnel Designer
               </h2>
               
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0">
