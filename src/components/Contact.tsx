@@ -1,4 +1,4 @@
-import { Mail, Linkedin } from "lucide-react"
+import { Mail, Linkedin, Briefcase } from "lucide-react"
 import { useScrollAnimation } from "@/hooks/useScrollAnimation"
 import { Card, CardContent } from "@/components/ui/card"
 
@@ -19,22 +19,22 @@ export function Contact() {
       action: () => window.open('https://www.linkedin.com/in/kyla-rosette-tumpalan/', '_blank')
     },
     {
-      icon: Linkedin,
+      icon: Briefcase,
       title: "OnlineJobs.ph",
-      value: "Connect with me",
+      value: "View My Profile",
       action: () => window.open('https://www.onlinejobs.ph/jobseekers/info/4452034', '_blank')
     },
     {
-      icon: Linkedin,
+      icon: Briefcase,
       title: "UpWork",
-      value: "Connect with me",
+      value: "View My Profile",
       action: () => window.open('https://www.upwork.com/freelancers/~01f7722b1c0b9b9c59?mp_source=share', '_blank')
     }
   ]
 
   return (
     <section ref={ref} className="section-padding bg-gradient-to-br from-background via-background to-primary/5 py-24">
-      <div className="container mx-auto max-w-4xl">
+      <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className={`text-5xl font-bold mb-6 bg-gradient-to-br from-foreground to-primary bg-clip-text text-transparent transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Get In Touch
@@ -44,7 +44,7 @@ export function Contact() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-2xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {contactInfo.map((info, index) => (
             <Card 
               key={index}
@@ -57,7 +57,7 @@ export function Contact() {
                   <info.icon className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="font-semibold text-xl mb-3">{info.title}</h3>
-                <p className="text-muted-foreground">{info.value}</p>
+                <p className="text-muted-foreground break-all">{info.value}</p>
               </CardContent>
             </Card>
           ))}

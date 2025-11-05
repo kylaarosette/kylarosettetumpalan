@@ -193,9 +193,25 @@ export function Hero() {
                   <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary/10 via-transparent to-accent-blue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 
-                {/* Floating badge */}
-                <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold shadow-lg animate-bounce delay-300">
+                {/* Floating badges */}
+                <div className="absolute -bottom-4 -right-4 bg-background border-2 border-primary/30 px-4 py-2 rounded-full text-sm font-semibold shadow-lg animate-bounce delay-300 backdrop-blur-sm">
                   Magna Cum Laude
+                </div>
+                
+                <div className="absolute -top-8 -left-12 bg-background border-2 border-primary/30 px-4 py-2 rounded-full text-sm font-medium shadow-lg animate-float delay-500 backdrop-blur-sm">
+                  Web Developer
+                </div>
+                
+                <div className="absolute -top-6 -right-16 bg-background border-2 border-primary/30 px-4 py-2 rounded-full text-sm font-medium shadow-lg animate-float delay-1000 backdrop-blur-sm">
+                  UI/UX Designer
+                </div>
+                
+                <div className="absolute -bottom-8 -left-16 bg-background border-2 border-primary/30 px-4 py-2 rounded-full text-sm font-medium shadow-lg animate-float delay-1500 backdrop-blur-sm">
+                  Funnel Designer
+                </div>
+                
+                <div className="absolute top-32 -right-20 bg-background border-2 border-primary/30 px-4 py-2 rounded-full text-sm font-medium shadow-lg animate-float delay-2000 backdrop-blur-sm">
+                  Email Marketer
                 </div>
                 
                 {/* Floating elements around image */}
