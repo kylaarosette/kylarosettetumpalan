@@ -66,9 +66,11 @@ import jr7 from "@/assets/jr7.jpg"
 import jr8 from "@/assets/jr8.jpg"
 import jr9 from "@/assets/jr9.jpg"
 
+import ref0 from "@/assets/ref0.png"
 import refunnel from "@/assets/re-funnel.png"
 import ffunnel from "@/assets/f-funnel.png"
 
+import bkc0 from "@/assets/bkc0.png"
 import bk from "@/assets/BK Campaign.png"
 
 interface Project {
@@ -150,7 +152,7 @@ const projects: Project[] = [
     description: "",
     technologies: ["Systeme.io"],
     images: [refunnel],
-    thumbnail: refunnel,
+    thumbnail: ref0,
     category: 'funnel'
   },
   {
@@ -169,7 +171,7 @@ const projects: Project[] = [
     description: "",
     technologies: ["Klaviyo", "Figma"],
     images: [bk],
-    thumbnail: bk,
+    thumbnail: bkc0,
     category: 'email'
   },
   
