@@ -68,6 +68,7 @@ import jr9 from "@/assets/jr9.jpg"
 
 import ref0 from "@/assets/ref0.png"
 import refunnel from "@/assets/re-funnel.png"
+import ff0 from "@/assets/ff0.png"
 import ffunnel from "@/assets/f-funnel.png"
 
 import bkc0 from "@/assets/bkc0.png"
@@ -161,7 +162,7 @@ const projects: Project[] = [
     description: "",
     technologies: ["Systeme.io"],
     images: [ffunnel],
-    thumbnail: ffunnel,
+    thumbnail: ff0,
     category: 'funnel'
   },
 
