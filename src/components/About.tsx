@@ -1,4 +1,4 @@
-import { GraduationCap, Award, Code, Heart } from "lucide-react"
+import { GraduationCap, Award, Eye, Heart } from "lucide-react"
 import { useScrollAnimation } from "@/hooks/useScrollAnimation"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 
@@ -9,22 +9,22 @@ export function About() {
     {
       icon: GraduationCap,
       title: "IT Graduate",
-      description: "Bachelor's degree in Information Technology with a focus on modern web development"
+      description: "Bachelor's degree in Information Technology with a focus on modern web development (Magna Cum Laude)"
     },
     {
       icon: Award,
-      title: "Magna Cum Laude",
-      description: "Graduated with high academic honors, demonstrating excellence in technical studies"
+      title: "Proven Excellence",
+      description: "Delivered successful projects that combine clean design, strategic thinking, and technical precision"
     },
     {
-      icon: Code,
+      icon: Eye,
       title: "Attentive to Detail",
-      description: "Meticulous in writing clean, efficient, and maintainable code"
+      description: "Committed to precision and quality in every aspect of work — from design and development to client collaboration."
     },
     {
       icon: Heart,
-      title: "Passionate Learner",
-      description: "Always eager to learn new technologies and improve development practices"
+      title: "Driven by Passion",
+      description: "Continuously learning, improving, and innovating to help brands grow through meaningful digital experiences."
     }
   ];
 
@@ -36,7 +36,7 @@ export function About() {
             About Me
           </h2>
           <p className={`text-xl text-muted-foreground max-w-3xl mx-auto transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            A passionate IT graduate with a strong foundation in web development and a commitment to creating exceptional digital experiences.
+            I craft digital experiences that blend design, strategy, and technology to help brands grow with purpose.
           </p>
         </div>
 
@@ -44,13 +44,13 @@ export function About() {
           <div className={`transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                As a recent IT graduate, I bring fresh perspectives and cutting-edge knowledge to web development. My journey in technology has been driven by curiosity and a passion for solving complex problems through innovative solutions.
+                Driven by curiosity and a passion for crafting meaningful digital experiences, I specialize in building responsive, user-friendly web applications that merge creativity with functionality.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                I specialize in creating responsive, user-friendly web applications using modern technologies. My academic background has provided me with a solid foundation in technical principles, while my projects have honed my practical development skills.
+                With a strong foundation in modern web technologies and hands-on experience across UI/UX design, funnel strategy, and email marketing, I bring innovative solutions that help brands grow and connect with their audiences.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I'm always excited to take on new challenges, collaborate with teams that share my passion for creating meaningful digital experiences, and continuously learn and upskill to grow both personally and professionally.
+                I’m always eager to take on new challenges, collaborate with visionary teams, and deliver results that make an impact.
               </p>
             </div>
           </div>

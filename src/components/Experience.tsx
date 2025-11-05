@@ -9,7 +9,7 @@ export function Experience() {
     {
       role: "BSIT Graduate",
       company: "Technological Institute of the Philippines",
-      location: "Quezon City",
+      location: "Quezon City, Philippines",
       period: "August 05, 2025",
       description: "Graduated with a Bachelor's degree in Information Technology, earning Magna Cum Laude honors. Gained a strong foundation in web development, database management, and cybersecurity principles.",
       isActive: true
@@ -17,7 +17,7 @@ export function Experience() {
     {
       role: "Front-end Developer Intern",
       company: "i4 Asia Incorporated",
-      location: "Philippines",
+      location: "Pasig City, Philippines",
       period: "March - May 2025",
       description: "Developed user interfaces for web applications using modern technologies. Collaborated with co-interns to create seamless user experiences.",
       isActive: false
@@ -25,8 +25,24 @@ export function Experience() {
     {
       role: "Full-Stack Developer Intern",
       company: "Technological Institute of the Philippines",
-      location: "Quezon City",
+      location: "Quezon City, Philippines",
       period: "January - April 2025",
+      description: "Worked on both frontend and backend development for a special project of the university. Gained hands-on experience with MERN Stack as the lead developer.",
+      isActive: false
+    },
+    {
+      role: "Personalized Internet Ads Assessor",
+      company: "Telus Digital",
+      location: "United States of America · Remote",
+      period: "August 2022 - February 2023",
+      description: "Provided feedback and analysis on advertisements found in search engine results and provided ratings on their relevance to the search terms used.",
+      isActive: false
+    },
+    {
+      role: "Digital Artist",
+      company: "Freelance",
+      location: "Quezon City, Philippines",
+      period: "April - September 2021",
       description: "Worked on both frontend and backend development for a special project of the university. Gained hands-on experience with MERN Stack as the lead developer.",
       isActive: false
     }

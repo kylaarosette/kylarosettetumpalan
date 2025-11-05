@@ -17,6 +17,18 @@ export function Contact() {
       title: "LinkedIn",
       value: "Connect with me",
       action: () => window.open('https://www.linkedin.com/in/kyla-rosette-tumpalan/', '_blank')
+    },
+    {
+      icon: Linkedin,
+      title: "OnlineJobs.ph",
+      value: "Connect with me",
+      action: () => window.open('https://www.onlinejobs.ph/jobseekers/info/4452034', '_blank')
+    },
+    {
+      icon: Linkedin,
+      title: "UpWork",
+      value: "Connect with me",
+      action: () => window.open('https://www.upwork.com/freelancers/~01f7722b1c0b9b9c59?mp_source=share', '_blank')
     }
   ]
 

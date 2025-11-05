@@ -142,16 +142,16 @@ export function Hero() {
               </div>
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight leading-tight">
-                Kyla Rosette <span className="text-primary">Tumpalan</span>
+                Hi, <span className="text-primary">I'm Kyla</span>
               </h1>
               
               <h2 className="text-xl md:text-2xl text-muted-foreground mb-6 font-light">
-                Freelance Web Developer & Funnel Designer
+                Freelancer
               </h2>
               
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0">
-                Passionate IT graduate with expertise in modern web technologies. 
-                I create innovative solutions that bridge the gap between design and functionality.
+                A passionate individual who loves turning ideas into engaging digital experiences.
+                From web development and UI/UX design to funnel design and email marketing, I create purposeful solutions that help brands grow.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -187,7 +187,7 @@ export function Hero() {
                 <div className="relative overflow-hidden rounded-full">
                   <img
                     src={isHovered ? photo2 : photo1}
-                    alt="Kyla Rosette Tumpalan"
+                    alt="Kyla Rosette"
                     className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-background shadow-2xl animate-float"
                   />
                   <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary/10 via-transparent to-accent-blue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
