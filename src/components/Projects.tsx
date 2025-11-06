@@ -73,6 +73,8 @@ import ffunnel from "@/assets/f-funnel.png"
 
 import bkc0 from "@/assets/bkc0.png"
 import bk from "@/assets/BK Campaign.png"
+import sw0 from "@/assets/sw0.png"
+import sw from "@/assets/Streetwear Campaign.png"
 
 interface Project {
   id: number
@@ -167,12 +169,21 @@ const projects: Project[] = [
   },
 
   {
-    id: 8,
+    id: 9,
     title: "Burger King Campaign",
     description: "",
     technologies: ["Klaviyo", "Figma"],
     images: [bk],
     thumbnail: bkc0,
+    category: 'email'
+  },
+  {
+    id: 10,
+    title: "Streetwear Fashion Campaign",
+    description: "",
+    technologies: ["Klaviyo", "Figma", "Canva"],
+    images: [sw],
+    thumbnail: sw0,
     category: 'email'
   },
   
