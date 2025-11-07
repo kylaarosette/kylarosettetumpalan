@@ -246,8 +246,8 @@ export function Projects() {
   )
 
   return (
-    <section ref={ref} className="section-padding bg-muted/30">
-      <div className="container mx-auto max-w-6xl">
+    <section ref={ref} className="section-padding bg-muted/30 py-24">
+      <div className="container mx-auto max-w-6xl px-4">
         <div className="text-center mb-16">
           <h2 className={`text-4xl md:text-5xl font-bold mb-4 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Featured Projects
@@ -258,22 +258,22 @@ export function Projects() {
         </div>
         
         <Tabs defaultValue="web" className="w-full">
-          <TabsList className="mb-8 flex w-full justify-center border-b border-border bg-transparent p-0 gap-8">
+          <TabsList className="mb-12 flex flex-wrap w-full justify-center border-b border-border/50 bg-transparent p-0 gap-2 md:gap-6">
             <TabsTrigger 
               value="web"
-              className="relative rounded-none border-b-2 border-transparent bg-transparent px-6 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 data-[state=active]:border-primary data-[state=active]:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none"
+              className="relative rounded-none border-b-2 border-transparent bg-transparent px-3 md:px-6 pb-3 pt-2 font-semibold text-sm md:text-base text-muted-foreground shadow-none transition-none focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 data-[state=active]:border-primary data-[state=active]:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none"
             >
               Web & UI/UX Development
             </TabsTrigger>
             <TabsTrigger 
               value="funnel"
-              className="relative rounded-none border-b-2 border-transparent bg-transparent px-6 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 data-[state=active]:border-primary data-[state=active]:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none"
+              className="relative rounded-none border-b-2 border-transparent bg-transparent px-3 md:px-6 pb-3 pt-2 font-semibold text-sm md:text-base text-muted-foreground shadow-none transition-none focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 data-[state=active]:border-primary data-[state=active]:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none"
             >
               Funnels
             </TabsTrigger>
             <TabsTrigger 
               value="email"
-              className="relative rounded-none border-b-2 border-transparent bg-transparent px-6 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 data-[state=active]:border-primary data-[state=active]:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none"
+              className="relative rounded-none border-b-2 border-transparent bg-transparent px-3 md:px-6 pb-3 pt-2 font-semibold text-sm md:text-base text-muted-foreground shadow-none transition-none focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 data-[state=active]:border-primary data-[state=active]:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none"
             >
               Email Marketing
             </TabsTrigger>

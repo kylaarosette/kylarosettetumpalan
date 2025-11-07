@@ -40,9 +40,9 @@ export function About() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className={`transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
-            <div className="prose prose-lg max-w-none">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+          <div className={`transition-all duration-700 delay-300 text-center lg:text-left ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
+            <div className="prose prose-lg max-w-none mx-auto lg:mx-0">
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 Driven by curiosity and a passion for crafting meaningful digital experiences, I specialize in building responsive, user-friendly web applications that merge creativity with functionality.
               </p>

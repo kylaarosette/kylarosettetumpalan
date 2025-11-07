@@ -34,7 +34,7 @@ export function Contact() {
 
   return (
     <section ref={ref} className="section-padding bg-gradient-to-br from-background via-background to-primary/5 py-24">
-      <div className="container mx-auto max-w-6xl">
+      <div className="container mx-auto max-w-6xl px-4">
         <div className="text-center mb-16">
           <h2 className={`text-5xl font-bold mb-6 bg-gradient-to-br from-foreground to-primary bg-clip-text text-transparent transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Get In Touch
@@ -44,20 +44,20 @@ export function Contact() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12 w-full">
           {contactInfo.map((info, index) => (
             <Card 
               key={index}
-              className={`group cursor-pointer hover:shadow-lg border-border/50 bg-card/50 backdrop-blur-sm transition-all duration-500 hover:scale-105 hover:border-primary/30 hover:bg-primary/5 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              className={`group cursor-pointer hover:shadow-lg border-border/50 bg-card/50 backdrop-blur-sm transition-all duration-500 hover:scale-105 hover:border-primary/30 hover:bg-primary/5 w-full ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               style={{ transitionDelay: `${(index + 3) * 100}ms` }}
               onClick={info.action || undefined}
             >
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors duration-300">
-                  <info.icon className="w-8 h-8 text-primary" />
+              <CardContent className="p-6 md:p-8 text-center flex flex-col items-center justify-center min-h-[200px]">
+                <div className="w-14 h-14 md:w-16 md:h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 group-hover:bg-primary/20 transition-colors duration-300 flex-shrink-0">
+                  <info.icon className="w-6 h-6 md:w-8 md:h-8 text-primary" />
                 </div>
-                <h3 className="font-semibold text-xl mb-3">{info.title}</h3>
-                <p className="text-muted-foreground break-all">{info.value}</p>
+                <h3 className="font-semibold text-lg md:text-xl mb-2 md:mb-3">{info.title}</h3>
+                <p className="text-muted-foreground text-sm md:text-base break-words w-full">{info.value}</p>
               </CardContent>
             </Card>
           ))}

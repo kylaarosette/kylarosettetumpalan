@@ -31,7 +31,7 @@ export function Hero() {
   }, [])
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center section-padding overflow-hidden pt-16">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 md:pt-28 lg:pt-20 px-4 lg:px-20 py-12 md:py-16">
       {/* Background elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent-blue/10"></div>
       <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-primary/3 to-transparent"></div>
@@ -132,10 +132,10 @@ export function Hero() {
         <Diamond className="w-3 h-3 text-primary/35 animate-pulse delay-3000" />
       </div>
       
-      <div className="container mx-auto relative z-10">
+      <div className="container mx-auto relative z-10 px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Left side - Text content */}
-          <div className="text-center lg:text-left order-2 lg:order-1">
+          <div className="text-center lg:text-left order-2 lg:order-1 w-full">
             <div className="fade-in">
               <div className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6 animate-fade-in backdrop-blur-sm border border-primary/20">
                 Available for Work
@@ -168,7 +168,7 @@ export function Hero() {
           </div>
 
           {/* Right side - Image */}
-          <div className="flex justify-center lg:justify-end order-1 lg:order-2">
+          <div className="flex justify-center lg:justify-end order-1 lg:order-2 w-full mb-12 lg:mb-0">
             <div className="relative">
               {/* Decorative rings */}
               <div className="absolute inset-0 rounded-full border-2 border-primary/20 animate-ping"></div>
@@ -194,23 +194,23 @@ export function Hero() {
                 </div>
                 
                 {/* Floating badges */}
-                <div className="absolute -bottom-4 -right-4 bg-background border-2 border-primary/30 px-4 py-2 rounded-full text-sm font-semibold shadow-lg animate-bounce delay-300 backdrop-blur-sm">
+                <div className="absolute -bottom-4 -right-2 sm:-right-4 bg-background border-2 border-primary/30 px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-semibold shadow-lg animate-bounce delay-300 backdrop-blur-sm">
                   Magna Cum Laude
                 </div>
                 
-                <div className="absolute -top-8 -left-12 bg-background border-2 border-primary/30 px-4 py-2 rounded-full text-sm font-medium shadow-lg animate-float delay-500 backdrop-blur-sm">
+                <div className="absolute -top-8 -left-4 sm:-left-12 bg-background border-2 border-primary/30 px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium shadow-lg animate-float delay-500 backdrop-blur-sm">
                   Web Developer
                 </div>
                 
-                <div className="absolute -top-6 -right-16 bg-background border-2 border-primary/30 px-4 py-2 rounded-full text-sm font-medium shadow-lg animate-float delay-1000 backdrop-blur-sm">
+                <div className="absolute -top-6 -right-6 sm:-right-16 bg-background border-2 border-primary/30 px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium shadow-lg animate-float delay-1000 backdrop-blur-sm">
                   UI/UX Designer
                 </div>
                 
-                <div className="absolute -bottom-8 -left-16 bg-background border-2 border-primary/30 px-4 py-2 rounded-full text-sm font-medium shadow-lg animate-float delay-1500 backdrop-blur-sm">
+                <div className="absolute -bottom-8 -left-6 sm:-left-16 bg-background border-2 border-primary/30 px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium shadow-lg animate-float delay-1500 backdrop-blur-sm">
                   Funnel Designer
                 </div>
                 
-                <div className="absolute top-32 -right-20 bg-background border-2 border-primary/30 px-4 py-2 rounded-full text-sm font-medium shadow-lg animate-float delay-2000 backdrop-blur-sm">
+                <div className="absolute top-28 sm:top-32 -right-8 sm:-right-20 bg-background border-2 border-primary/30 px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium shadow-lg animate-float delay-2000 backdrop-blur-sm">
                   Email Marketer
                 </div>
                 

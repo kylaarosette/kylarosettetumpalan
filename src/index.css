@@ -189,6 +189,15 @@
 /* Smooth scrolling for the whole page */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 /* Background patterns and additional animations */

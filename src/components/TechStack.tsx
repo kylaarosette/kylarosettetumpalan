@@ -78,11 +78,11 @@ export function TechStack() {
   const { ref, isVisible } = useScrollAnimation();
 
   const renderTechGrid = (techs: typeof webDevTechs) => (
-    <div className="flex flex-wrap justify-center gap-8 max-w-4xl mx-auto">
+    <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-6 md:gap-8 max-w-4xl mx-auto">
       {techs.map((tech, index) => (
         <div 
           key={index} 
-          className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:scale-105 w-32"
+          className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:scale-105"
         >
           <div className="w-20 h-20 flex items-center justify-center bg-background/50 rounded-2xl mb-4 group-hover:bg-primary/10 transition-all duration-300">
             <tech.icon className="text-4xl text-primary group-hover:scale-110 transition-transform duration-300" />
@@ -108,28 +108,28 @@ export function TechStack() {
         </div>
         
         <Tabs defaultValue="web" className="w-full">
-          <TabsList className="mb-12 flex w-full justify-center border-b border-border/50 bg-transparent p-0 gap-6">
+          <TabsList className="mb-12 flex flex-wrap w-full justify-center border-b border-border/50 bg-transparent p-0 gap-2 md:gap-6">
             <TabsTrigger 
               value="web"
-              className="relative rounded-none border-b-2 border-transparent bg-transparent px-6 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-primary data-[state=active]:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none"
+              className="relative rounded-none border-b-2 border-transparent bg-transparent px-3 md:px-6 pb-3 pt-2 font-semibold text-sm md:text-base text-muted-foreground shadow-none transition-none data-[state=active]:border-primary data-[state=active]:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none"
             >
               Web & UI/UX
             </TabsTrigger>
             <TabsTrigger 
               value="funnels"
-              className="relative rounded-none border-b-2 border-transparent bg-transparent px-6 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-primary data-[state=active]:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none"
+              className="relative rounded-none border-b-2 border-transparent bg-transparent px-3 md:px-6 pb-3 pt-2 font-semibold text-sm md:text-base text-muted-foreground shadow-none transition-none data-[state=active]:border-primary data-[state=active]:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none"
             >
               Funnels
             </TabsTrigger>
             <TabsTrigger 
               value="email"
-              className="relative rounded-none border-b-2 border-transparent bg-transparent px-6 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-primary data-[state=active]:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none"
+              className="relative rounded-none border-b-2 border-transparent bg-transparent px-3 md:px-6 pb-3 pt-2 font-semibold text-sm md:text-base text-muted-foreground shadow-none transition-none data-[state=active]:border-primary data-[state=active]:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none"
             >
               Email Marketing
             </TabsTrigger>
             <TabsTrigger 
               value="productivity"
-              className="relative rounded-none border-b-2 border-transparent bg-transparent px-6 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-primary data-[state=active]:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none"
+              className="relative rounded-none border-b-2 border-transparent bg-transparent px-3 md:px-6 pb-3 pt-2 font-semibold text-sm md:text-base text-muted-foreground shadow-none transition-none data-[state=active]:border-primary data-[state=active]:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none"
             >
               Productivity
             </TabsTrigger>
