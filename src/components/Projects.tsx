@@ -258,33 +258,35 @@ export function Projects() {
         </div>
         
         <Tabs defaultValue="web" className="w-full">
-          <TabsList className="mb-12 flex flex-wrap w-full justify-center border-b border-border/50 bg-transparent p-0 gap-2 md:gap-6">
-            <TabsTrigger 
-              value="web"
-              className="relative rounded-none border-b-2 border-transparent bg-transparent px-3 md:px-6 pb-3 pt-2 font-semibold text-sm md:text-base text-muted-foreground shadow-none transition-none focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 data-[state=active]:border-primary data-[state=active]:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none"
-            >
-              Web & UI/UX Development
-            </TabsTrigger>
-            <TabsTrigger 
-              value="funnel"
-              className="relative rounded-none border-b-2 border-transparent bg-transparent px-3 md:px-6 pb-3 pt-2 font-semibold text-sm md:text-base text-muted-foreground shadow-none transition-none focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 data-[state=active]:border-primary data-[state=active]:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none"
-            >
-              Funnels
-            </TabsTrigger>
-            <TabsTrigger 
-              value="email"
-              className="relative rounded-none border-b-2 border-transparent bg-transparent px-3 md:px-6 pb-3 pt-2 font-semibold text-sm md:text-base text-muted-foreground shadow-none transition-none focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 data-[state=active]:border-primary data-[state=active]:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none"
-            >
-              Email Marketing
-            </TabsTrigger>
-          </TabsList>
+          <div className="flex justify-center mb-16">
+            <TabsList className="inline-flex flex-wrap border-b border-border/50 bg-transparent p-0 gap-2 md:gap-6">
+              <TabsTrigger 
+                value="web"
+                className="relative rounded-none border-b-2 border-transparent bg-transparent px-3 md:px-6 pb-3 pt-2 font-semibold text-sm md:text-base text-muted-foreground shadow-none transition-none focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 data-[state=active]:border-primary data-[state=active]:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none"
+              >
+                Web & UI/UX Development
+              </TabsTrigger>
+              <TabsTrigger 
+                value="funnel"
+                className="relative rounded-none border-b-2 border-transparent bg-transparent px-3 md:px-6 pb-3 pt-2 font-semibold text-sm md:text-base text-muted-foreground shadow-none transition-none focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 data-[state=active]:border-primary data-[state=active]:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none"
+              >
+                Funnels
+              </TabsTrigger>
+              <TabsTrigger 
+                value="email"
+                className="relative rounded-none border-b-2 border-transparent bg-transparent px-3 md:px-6 pb-3 pt-2 font-semibold text-sm md:text-base text-muted-foreground shadow-none transition-none focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 data-[state=active]:border-primary data-[state=active]:text-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none"
+              >
+                Email Marketing
+              </TabsTrigger>
+            </TabsList>
+          </div>
 
           <TabsContent value="web">
             <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {webProjects.map((project, index) => renderProjectCard(project, index))}
             </div>
-            <div className="md:hidden">
-              <Carousel opts={{ loop: true }} className="w-full max-w-sm mx-auto">
+            <div className="md:hidden px-12">
+              <Carousel opts={{ loop: true }} className="w-full">
                 <CarouselContent>
                   {webProjects.map((project, index) => (
                     <CarouselItem key={project.id}>
@@ -302,8 +304,8 @@ export function Projects() {
             <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {funnelProjects.map((project, index) => renderProjectCard(project, index))}
             </div>
-            <div className="md:hidden">
-              <Carousel opts={{ loop: true }} className="w-full max-w-sm mx-auto">
+            <div className="md:hidden px-12">
+              <Carousel opts={{ loop: true }} className="w-full">
                 <CarouselContent>
                   {funnelProjects.map((project, index) => (
                     <CarouselItem key={project.id}>
@@ -321,8 +323,8 @@ export function Projects() {
             <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {emailProjects.map((project, index) => renderProjectCard(project, index))}
             </div>
-            <div className="md:hidden">
-              <Carousel opts={{ loop: true }} className="w-full max-w-sm mx-auto">
+            <div className="md:hidden px-12">
+              <Carousel opts={{ loop: true }} className="w-full">
                 <CarouselContent>
                   {emailProjects.map((project, index) => (
                     <CarouselItem key={project.id}>
