@@ -53,7 +53,7 @@ export function Experience() {
       company: "Freelance",
       location: "Quezon City, Philippines",
       period: "April - September 2021",
-      description: "Worked on both frontend and backend development for a special project of the university. Gained hands-on experience with MERN Stack as the lead developer.",
+      description: "Specialized in transforming commissioned client images into vector art and graphic art illustrations.",
       isActive: false
     }
   ];
