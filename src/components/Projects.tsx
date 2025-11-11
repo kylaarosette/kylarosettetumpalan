@@ -3,6 +3,15 @@ import { ProjectModal } from "./ProjectModal"
 import { useScrollAnimation } from "@/hooks/useScrollAnimation"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Button } from "@/components/ui/button"
+
+import abs0 from "@/assets/abs0.png"
+import abs1 from "@/assets/abs1.png"
+import abs2 from "@/assets/abs2.png"
+import abs3 from "@/assets/abs3.png"
+import abs4 from "@/assets/abs4.png"
+import abs5 from "@/assets/abs5.png"
+
 import dm0 from "@/assets/dm0.png"
 import dm1 from "@/assets/dm1.png"
 import dm2 from "@/assets/dm2.png"
@@ -90,6 +99,16 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
+    title: "Adore Beauty Skincare",
+    description: "A visually appealing and user-friendly e-commerce website designed for a skincare brand. Built using WordPress and Elementor, the site features a clean layout, intuitive navigation, and seamless shopping experience. The website is optimized for performance and tablet and mobile responsiveness, ensuring a smooth browsing experience across all devices.",
+    technologies: ["WordPress", "Elementor"],
+    images: [abs1, abs2, abs3, abs4, abs5],
+    liveUrl: "https://adorebeautyskincare.infinityfreeapp.com/",
+    thumbnail: abs0,
+    category: 'web'
+  },
+  {
+    id: 2,
     title: "Dazzle Me",
     description: "An e-commerce website I built using Shopify during my internship. It was based on the Dawn theme, with additional customizations implemented through custom Liquid code. Please note that the site is not fully polished, as my access was removed once my internship hours were completed. Password: kyla15",
     technologies: ["Shopify", "Liquid", "HTML", "CSS", "JavaScript", "Canva"],
@@ -99,7 +118,7 @@ const projects: Project[] = [
     category: 'web'
   },
   {
-    id: 2,
+    id: 3,
     title: "Coffee Studio",
     description: "An e-commerce website that features a complete online ordering system with payment API integration, administrator inventory management for tracking sales and stock updates, customer account functionality for managing favorites and cart items, and engaging content sections including monthly product highlights and informative articles. Designed to bridge traditional coffee culture with digital convenience, the website enables customers to browse and purchase premium coffee blends, brewing equipment, and merchandise anytime, anywhere, while providing the business with streamlined operations and expanded market reach in the competitive food and beverage industry.",
     technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MySQL", "PayPal Sandbox API", "Canva", "Figma"],
@@ -109,7 +128,7 @@ const projects: Project[] = [
     category: 'web'
   },
   {
-    id: 3,
+    id: 4,
     title: "Grand Cascade Hotel",
     description: "Built with a focus on UI/frontend design and administrative functionality, the system features a comprehensive web portal for browsing hotel information, viewing room availability, and exploring booking options, along with an admin panel for monitoring and managing the website. While the platform showcases a complete reservation interface that allows users to access the system anytime and anywhere, the actual reservation booking functionality was not integrated, as the project requirements primarily emphasized frontend development and administrative dashboard capabilities rather than full backend reservation processing. The system addresses the traditional challenges of manual paper-based hotel management by providing a modern, user-friendly digital interface that enhances the hotel's online presence and streamlines the guest information management process.",
     technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "JQuery", "PHP", "MySQL", "Canva", "Figma"],
@@ -119,7 +138,7 @@ const projects: Project[] = [
     category: 'web'
   },
   {
-    id: 4,
+    id: 5,
     title: "VigiWheel",
     description: "VigiWheel: An IoT-Based Monitoring System for Drivers' Distraction and Drowsiness Indicators with Web Application Management is our capstone project, a special project of the school aimed at addressing drowsy and distracted driving—the leading contributors to road accidents. It enables UV Express operators to monitor drivers' behavior, identifying signs of drowsiness or distraction through behavioral cues such as blinking frequency, eye closures, mouth openings, head pose estimation, and phone detection. An IoT module streams live video feeds to a remote processing device for analysis, while a companion web application manages captured logs and provides operators with actionable insights. Data analytics further supports decision-making by highlighting frequent offenders and offering data-driven recommendations. Evaluated by 51 respondents—including drivers, operators, and IT professionals—against ISO/IEC 25010 and ISO/IEC 30141 standards, VigiWheel achieved an overall mean rating of 5.35 (\"Agree\"), affirming its effectiveness as a driver monitoring and analytics tool.",
     technologies: ["MongoDB", "Express.js", "React", "Node.js", "Material-UI", "JavaScript", "Looker Studio", "AWS S3", "Postman", "Python", "OpenCV", "Raspberry Pi 5", "Roboflow", "Google Colab", "Flask", "zrok", "Canva"],
@@ -129,7 +148,7 @@ const projects: Project[] = [
     category: 'web'
   },
   {
-    id: 5,
+    id: 6,
     title: "Triopica Milk Tea",
     description: "A mobile-based e-commerce application using the Ionic framework to redefine the tea-shopping experience. The app features seamlessly designed intuitive navigation, personalized user profiles, shopping cart functionality, and transaction processing, allowing customers to explore and purchase unique tea blends with ease. Built with a commitment to excellence and user experience, the platform provides customers with unprecedented convenience and accessibility, enabling them to browse, select, and order their favorite milk tea products anytime, anywhere directly from their mobile devices. This project demonstrates the integration of modern mobile technologies to enhance customer engagement and streamline the ordering process in the food and beverage industry.",
     technologies: ["Angular", "Canva", "Figma"],
@@ -139,7 +158,7 @@ const projects: Project[] = [
     category: 'web'
   },
   {
-    id: 6,
+    id: 7,
     title: "JAVAriety",
     description: "An e-commerce transaction-based system that allows customers to browse and purchase products conveniently from anywhere, while offering sellers a complete order management dashboard to track product status from payment confirmation through preparation, shipment scheduling, delivery, and completion. Designed to address the challenges of traditional retail in the post-pandemic era, the platform reduces physical contact and viral infection risks by eliminating in-person transactions, decreases labor costs and employee workload through automated transaction processing and calculations, and helps contain COVID-19 spread by minimizing facility-based interactions. The system features an attractive and interactive purchasing interface that avoids long queues, promotes ICT-based transaction processing, and enables shopping through various platforms, ultimately increasing sales and profit while delivering sophisticated technology and superior customer service in today's digital-first retail landscape.",
     technologies: ["Java", "PHP", "MySQL", "Canva", "Figma"],
@@ -150,7 +169,7 @@ const projects: Project[] = [
   },
 
   {
-    id: 7,
+    id: 8,
     title: "Real Estate Funnel",
     description: "",
     technologies: ["Systeme.io"],
@@ -159,7 +178,7 @@ const projects: Project[] = [
     category: 'funnel'
   },
   {
-    id: 8,
+    id: 9,
     title: "Fitness Funnel",
     description: "",
     technologies: ["Systeme.io"],
@@ -169,7 +188,7 @@ const projects: Project[] = [
   },
 
   {
-    id: 9,
+    id: 10,
     title: "Burger King Campaign",
     description: "",
     technologies: ["Klaviyo", "Figma"],
@@ -178,7 +197,7 @@ const projects: Project[] = [
     category: 'email'
   },
   {
-    id: 10,
+    id: 11,
     title: "Streetwear Fashion Campaign",
     description: "",
     technologies: ["Klaviyo", "Figma", "Canva"],
@@ -193,6 +212,9 @@ export function Projects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
   const { ref, isVisible } = useScrollAnimation()
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [showAllWeb, setShowAllWeb] = useState(false)
+  const [showAllFunnel, setShowAllFunnel] = useState(false)
+  const [showAllEmail, setShowAllEmail] = useState(false)
 
   const openModal = (project: Project) => {
     setSelectedProject(project)
@@ -283,8 +305,19 @@ export function Projects() {
 
           <TabsContent value="web">
             <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {webProjects.map((project, index) => renderProjectCard(project, index))}
+              {(showAllWeb ? webProjects : webProjects.slice(0, 6)).map((project, index) => renderProjectCard(project, index))}
             </div>
+            {webProjects.length > 6 && (
+              <div className="hidden md:flex justify-center mt-8">
+                <Button
+                  onClick={() => setShowAllWeb(!showAllWeb)}
+                  variant="outline"
+                  className="transition-all duration-150"
+                >
+                  {showAllWeb ? 'Show Less' : 'View More'}
+                </Button>
+              </div>
+            )}
             <div className="md:hidden px-12">
               <Carousel opts={{ loop: true }} className="w-full">
                 <CarouselContent>
@@ -302,8 +335,19 @@ export function Projects() {
 
           <TabsContent value="funnel">
             <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {funnelProjects.map((project, index) => renderProjectCard(project, index))}
+              {(showAllFunnel ? funnelProjects : funnelProjects.slice(0, 6)).map((project, index) => renderProjectCard(project, index))}
             </div>
+            {funnelProjects.length > 6 && (
+              <div className="hidden md:flex justify-center mt-8">
+                <Button
+                  onClick={() => setShowAllFunnel(!showAllFunnel)}
+                  variant="outline"
+                  className="transition-all duration-150"
+                >
+                  {showAllFunnel ? 'Show Less' : 'View More'}
+                </Button>
+              </div>
+            )}
             <div className="md:hidden px-12">
               <Carousel opts={{ loop: true }} className="w-full">
                 <CarouselContent>
@@ -321,8 +365,19 @@ export function Projects() {
 
           <TabsContent value="email">
             <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {emailProjects.map((project, index) => renderProjectCard(project, index))}
+              {(showAllEmail ? emailProjects : emailProjects.slice(0, 6)).map((project, index) => renderProjectCard(project, index))}
             </div>
+            {emailProjects.length > 6 && (
+              <div className="hidden md:flex justify-center mt-8">
+                <Button
+                  onClick={() => setShowAllEmail(!showAllEmail)}
+                  variant="outline"
+                  className="transition-all duration-150"
+                >
+                  {showAllEmail ? 'Show Less' : 'View More'}
+                </Button>
+              </div>
+            )}
             <div className="md:hidden px-12">
               <Carousel opts={{ loop: true }} className="w-full">
                 <CarouselContent>
