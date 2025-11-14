@@ -5,6 +5,13 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Button } from "@/components/ui/button"
 
+import d0 from "@/assets/d0.png"
+import d1 from "@/assets/d1.png"
+import d2 from "@/assets/d2.png"
+import d3 from "@/assets/d3.png"
+import d4 from "@/assets/d4.png"
+import d5 from "@/assets/d5.png"
+
 import abs0 from "@/assets/abs0.png"
 import abs1 from "@/assets/abs1.png"
 import abs2 from "@/assets/abs2.png"
@@ -97,6 +104,16 @@ interface Project {
 }
 
 const projects: Project[] = [
+  {
+    id: 1,
+    title: "Driveon",
+    description: "A modern and responsive website designed for an auto repair shop using WordPress and Elementor. The site features a clean layout, easy navigation, and showcases the services offered by the shop. It is optimized for performance and device responsiveness, ensuring a seamless user experience across all devices.",
+    technologies: ["WordPress", "Elementor"],
+    images: [d1, d2, d3, d4, d5],
+    liveUrl: "https://driveon.infinityfreeapp.com/",
+    thumbnail: d0,
+    category: 'web'
+  },
   {
     id: 1,
     title: "Adore Beauty Skincare",
