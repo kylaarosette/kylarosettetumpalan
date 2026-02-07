@@ -25,9 +25,13 @@ import {
   SiZoom,
   SiGmail,
   SiGoogledrive,
-  SiDropbox
+  SiDropbox,
+  SiOpenai,
+  SiAnthropic,
+  SiGithubcopilot,
+  SiPerplexity,
 } from 'react-icons/si'
-import { Code, Mail, Calendar, FileText, Video, Cloud } from 'lucide-react'
+import { Code, Mail, Calendar, FileText, Video, Cloud, BotIcon, Banana, BananaIcon, } from 'lucide-react'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Button } from "@/components/ui/button"
@@ -37,6 +41,7 @@ const webDevTechs = [
   { name: "WordPress", icon: SiWordpress },
   { name: "Shopify", icon: SiShopify },
   { name: "Wix", icon: SiWix },
+  { name: "Onepage.io", icon: Code },
   { name: "HTML", icon: SiHtml5 },
   { name: "CSS", icon: SiCss3 },
   { name: "JavaScript", icon: SiJavascript },
@@ -70,10 +75,18 @@ const emailMarketingTechs = [
 const productivityTechs = [
   { name: "Microsoft Office", icon: FileText },
   { name: "Google Workspace", icon: SiGoogle },
+  { name: "Asana", icon: SiAsana },
+  { name: "Slack", icon: SiSlack },
   { name: "Notion", icon: SiNotion },
   { name: "Microsoft Teams", icon: Video },
   { name: "Zoom", icon: SiZoom },
   { name: "Trello", icon: SiTrello },
+  { name: "ChatGPT", icon: SiOpenai },
+  { name: "Claude", icon: SiAnthropic },
+  { name: "Gemini", icon: SiGoogle },
+  { name: "GitHub Copilot", icon: SiGithubcopilot },
+  { name: "Perplexity", icon: SiPerplexity },
+  { name: "Nano Banana", icon: BananaIcon },
 ]
 
 export function TechStack() {

@@ -11,6 +11,8 @@ import d2 from "@/assets/d2.png"
 import d3 from "@/assets/d3.png"
 import d4 from "@/assets/d4.png"
 import d5 from "@/assets/d5.png"
+import dfull from "@/assets/d-full.png"
+import afull from "@/assets/a-full-1.jpg"
 
 import abs0 from "@/assets/abs0.png"
 import abs1 from "@/assets/abs1.png"
@@ -110,7 +112,7 @@ const projects: Project[] = [
     description: "A modern and responsive website designed for an auto repair shop using WordPress and Elementor. The site features a clean layout, easy navigation, and showcases the services offered by the shop. It is optimized for performance and device responsiveness, ensuring a seamless user experience across all devices.",
     technologies: ["WordPress", "Elementor"],
     images: [d1, d2, d3, d4, d5],
-    liveUrl: "https://driveon.infinityfreeapp.com/",
+    liveUrl: dfull,
     thumbnail: d0,
     category: 'web'
   },
@@ -120,7 +122,7 @@ const projects: Project[] = [
     description: "A visually appealing and user-friendly e-commerce website designed for a skincare brand. Built using WordPress and Elementor, the site features a clean layout, intuitive navigation, and seamless shopping experience. The website is optimized for performance and tablet and mobile responsiveness, ensuring a smooth browsing experience across all devices.",
     technologies: ["WordPress", "Elementor"],
     images: [abs1, abs2, abs3, abs4, abs5],
-    liveUrl: "https://adorebeautyskincare.infinityfreeapp.com/",
+    liveUrl: afull,
     thumbnail: abs0,
     category: 'web'
   },
@@ -140,7 +142,6 @@ const projects: Project[] = [
     description: "An e-commerce website that features a complete online ordering system with payment API integration, administrator inventory management for tracking sales and stock updates, customer account functionality for managing favorites and cart items, and engaging content sections including monthly product highlights and informative articles. Designed to bridge traditional coffee culture with digital convenience, the website enables customers to browse and purchase premium coffee blends, brewing equipment, and merchandise anytime, anywhere, while providing the business with streamlined operations and expanded market reach in the competitive food and beverage industry.",
     technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MySQL", "PayPal Sandbox API", "Canva", "Figma"],
     images: [cs1, cs2, cs3, cs4, cs5, cs6, cs7, cs8, cs9, cs10, cs11, cs12],
-    liveUrl: "https://coffeestudio.infinityfreeapp.com/",
     thumbnail: cs0,
     category: 'web'
   },
@@ -150,7 +151,6 @@ const projects: Project[] = [
     description: "Built with a focus on UI/frontend design and administrative functionality, the system features a comprehensive web portal for browsing hotel information, viewing room availability, and exploring booking options, along with an admin panel for monitoring and managing the website. While the platform showcases a complete reservation interface that allows users to access the system anytime and anywhere, the actual reservation booking functionality was not integrated, as the project requirements primarily emphasized frontend development and administrative dashboard capabilities rather than full backend reservation processing. The system addresses the traditional challenges of manual paper-based hotel management by providing a modern, user-friendly digital interface that enhances the hotel's online presence and streamlines the guest information management process.",
     technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "JQuery", "PHP", "MySQL", "Canva", "Figma"],
     images: [gch1, gch2, gch3, gch4, gch5, gch6, gch7, gch8, gch9, gch10],
-    liveUrl: "https://grand-cascade-hotel.infinityfreeapp.com/",
     thumbnail: gch0,
     category: 'web'
   },

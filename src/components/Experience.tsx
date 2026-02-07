@@ -12,7 +12,7 @@ export function Experience() {
       role: "Freelancer",
       company: "Self-Employed",
       location: "Quezon City, Philippines",
-      period: "Present",
+      period: "2025 to Present",
       description: "Delivering end-to-end digital solutions in web development, funnel design, email marketing, and UI/UX design to help brands enhance their online presence and drive growth.",
       isActive: true
     },

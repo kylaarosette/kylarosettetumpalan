@@ -4,7 +4,7 @@ export function Footer() {
       <div className="container mx-auto section-padding py-16">
         <div className="flex justify-center items-center">
           <p className="text-muted-foreground text-md text-center">
-            © 2025 Kyla Rosette Tumpalan. All rights reserved.
+            © {new Date().getFullYear()} Kyla Rosette Tumpalan. All rights reserved.
           </p>
         </div>
       </div>
