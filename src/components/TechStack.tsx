@@ -23,15 +23,12 @@ import {
   SiNotion,
   SiSlack,
   SiZoom,
-  SiGmail,
-  SiGoogledrive,
-  SiDropbox,
   SiOpenai,
   SiAnthropic,
   SiGithubcopilot,
   SiPerplexity,
 } from 'react-icons/si'
-import { Code, Mail, Calendar, FileText, Video, Cloud, BotIcon, Banana, BananaIcon, } from 'lucide-react'
+import { Code, Mail, FileText, Video, TrendingUp, BananaIcon, } from 'lucide-react'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Button } from "@/components/ui/button"
@@ -39,6 +36,8 @@ import { useState, useEffect } from "react"
 
 const webDevTechs = [
   { name: "WordPress", icon: SiWordpress },
+  { name: "WooCommerce", icon: SiWordpress },
+  { name: "Rank Math SEO", icon: TrendingUp  },
   { name: "Shopify", icon: SiShopify },
   { name: "Wix", icon: SiWix },
   { name: "Onepage.io", icon: Code },
